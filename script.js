@@ -134,25 +134,17 @@ function findDistinctValues(values) {
     return distinctValues;
 }
 
-function testFindDistinctValues() {
-    let result = findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3]);
-    console.assert(result === [1, 3, 5, 4, 2, 6, 8, 21, 0], {
-        "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3])",
-        "expected": [1, 3, 5, 4, 2, 6, 8, 21, 0],
-        "result": result
-    })
-}
-testFindDistinctValues();
+console.log({
+    "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3])",
+    "expected": [1, 3, 5, 4, 2, 6, 8, 21, 0],
+    "result": findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3])
+})
 
-function testFindDistinctValues2() {
-    let result = findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3]);
-    console.assert(result === [1, 3, 5, 4, 2, 6, 8, 0], {
-        "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])",
-        "expected": [1, 3, 5, 4, 2, 6, 8, 0],
-        "result": result
-    })
-}
-testFindDistinctValues2();
+console.log({
+    "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])",
+    "expected": [1, 3, 5, 4, 2, 6, 8, 0],
+    "result": findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])
+})
 
 // 7 --------------------------------------------------------------------------------------
 function findDistinctValueCounts(values) {
@@ -167,25 +159,17 @@ function findDistinctValueCounts(values) {
     return distinctValueCounts;
 }
 
-function testFindDistinctValueCounts() {
-    let result = findDistinctValueCounts([1, 1, 1, 3]);
-    console.assert(result === { 1: 3, 3: 1 }, {
-        "function": "findDistinctValueCounts([1, 1, 1, 3])",
-        "expected": { 1: 3, 3: 1 },
-        "result": result
-    })
-}
-testFindDistinctValueCounts();
+console.log({
+    "function": "findDistinctValueCounts([1, 1, 1, 3])",
+    "expected": { 1: 3, 3: 1 },
+    "result": findDistinctValueCounts([1, 1, 1, 3])
+})
 
-function testFindDistinctValueCounts2() {
-    let result = findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5]);
-    console.assert(result === { 1: 3, 3: 1, 5: 4 }, {
-        "function": "findDistinctValueCounts([1, 1, 1, 3])",
-        "expected": { 1: 3, 3: 1, 5: 4 },
-        "result": result
-    })
-}
-testFindDistinctValueCounts2();
+console.log({
+    "function": "findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5])",
+    "expected": { 1: 3, 3: 1, 5: 4 },
+    "result": findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5])
+})
 
 // 8 --------------------------------------------------------------------------------------
 function calculateResult(expression, object) {
