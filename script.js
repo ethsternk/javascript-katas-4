@@ -134,17 +134,25 @@ function findDistinctValues(values) {
     return distinctValues;
 }
 
-console.log({
-    "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3])",
-    "expected": [1, 3, 5, 4, 2, 6, 8, 21, 0],
-    "result": findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 21, 5, 4, 1, 0, 0, 2, 3])
-})
+function testFindDistinctValues() {
+    let result = JSON.stringify(findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 21, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3]));
+    console.assert(result === JSON.stringify([1, 3, 5, 4, 2, 6, 21, 8, 0]), {
+        "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 21, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])",
+        "expected": JSON.stringify([1, 3, 5, 4, 2, 6, 21, 8, 0]),
+        "result": JSON.stringify(findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 21, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3]))
+    })
+}
+testFindDistinctValues();
 
-console.log({
-    "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])",
-    "expected": [1, 3, 5, 4, 2, 6, 8, 0],
-    "result": findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])
-})
+function testFindDistinctValues2() {
+    let result = JSON.stringify(findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3]));
+    console.assert(result === JSON.stringify([1, 3, 5, 4, 2, 6, 8, 0]), {
+        "function": "findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3])",
+        "expected": JSON.stringify([1, 3, 5, 4, 2, 6, 8, 0]),
+        "result": JSON.stringify(findDistinctValues([1, 3, 5, 4, 2, 5, 1, 5, 3, 6, 1, 5, 4, 8, 4, 5, 4, 1, 0, 0, 2, 3]))
+    })
+}
+testFindDistinctValues2();
 
 // 7 --------------------------------------------------------------------------------------
 function findDistinctValueCounts(values) {
@@ -159,17 +167,25 @@ function findDistinctValueCounts(values) {
     return distinctValueCounts;
 }
 
-console.log({
-    "function": "findDistinctValueCounts([1, 1, 1, 3])",
-    "expected": { 1: 3, 3: 1 },
-    "result": findDistinctValueCounts([1, 1, 1, 3])
-})
+function testFindDistinctValueCounts() {
+    let result = JSON.stringify(findDistinctValueCounts([1, 1, 1, 3]));
+    console.assert(result === JSON.stringify({ 1: 3, 3: 1}), {
+        "function": "findDistinctValueCounts([1, 1, 1, 3]",
+        "expected": JSON.stringify({ 1: 3, 3: 1}),
+        "result": JSON.stringify(findDistinctValueCounts([1, 1, 1, 3]))
+    })
+}
+testFindDistinctValueCounts();
 
-console.log({
-    "function": "findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5])",
-    "expected": { 1: 3, 3: 1, 5: 4 },
-    "result": findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5])
-})
+function testFindDistinctValueCounts2() {
+    let result = JSON.stringify(findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5]));
+    console.assert(result === JSON.stringify({ 1: 3, 3: 1, 5: 4}), {
+        "function": "findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5]",
+        "expected": JSON.stringify({ 1: 3, 3: 1, 5: 4}),
+        "result": JSON.stringify(findDistinctValueCounts([1, 1, 1, 3, 5, 5, 5, 5]))
+    })
+}
+testFindDistinctValueCounts2();
 
 // 8 --------------------------------------------------------------------------------------
 function calculateResult(expression, object) {
